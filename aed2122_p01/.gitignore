@@ -1,0 +1,6 @@
+.idea/
+CMakeLists.txt
+Tests/
+cmake-build-debug-mingw/
+cmake-build-debug/
+lib/

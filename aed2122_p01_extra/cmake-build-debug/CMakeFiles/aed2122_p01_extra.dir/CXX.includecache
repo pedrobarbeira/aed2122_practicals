@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p01_extra/Tests/mail.h
+string
+-
+
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p01_extra/Tests/postOffice.cpp
+postOffice.h
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p01_extra/Tests/postOffice.h
+string
+-
+
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p01_extra/Tests/postOffice.h
+mail.h
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p01_extra/Tests/mail.h
+postman.h
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p01_extra/Tests/postman.h
+vector
+-
+
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p01_extra/Tests/postman.h
+mail.h
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p01_extra/Tests/mail.h
+string
+-
+vector
+-
+

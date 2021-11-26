@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\35191\Desktop\MIEIC\2ano\1o Semestre\AEDA\Praticas\aed2122_p03"
+Doxygen build started
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p03/cmake-build-debug
