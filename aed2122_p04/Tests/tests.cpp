@@ -51,7 +51,7 @@ TEST(test, minDifference){
     EXPECT_EQ(11,FunSortProblem::minDifference({3,4,1,9,12,7}, 6));
     EXPECT_EQ(2,FunSortProblem::minDifference({7, 3, 2, 4, 9, 12, 56}, 3));
 }
-
+/**
 TEST(test, minPlatforms){
     EXPECT_EQ(3,FunSortProblem::minPlatforms({9.00, 9.40, 9.50, 11.00, 15.00, 18.00}, {9.10, 12.00, 11.20, 11.30, 19.00, 20.00}));
     EXPECT_EQ(1,FunSortProblem::minPlatforms({9.00, 11.00, 12.35}, {10.00, 12.00, 12.40}));
@@ -69,3 +69,4 @@ TEST(test, nutsBolts){
     }
 
 }
+*/
