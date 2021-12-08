@@ -46,13 +46,18 @@ int FunSearchProblem::squareR(int num) {
 
 // TODO
 int FunSearchProblem::smallestMissingValue(const vector<int> & values) {
+    bool neg = true;
     vector<bool> numbers(INT_MAX, false);
     for(int i = 0; i < values.size(); i++)
-        if(values[i] > 0)
+        if(values[i] > 0) {
             numbers[values[i]] = true;
-    for(int i = 1; i < numbers.size(); i++)
-        if(!numbers[i]) return i;
-    return 0;
+            neg = false;
+        }
+    if(!neg) {
+        for (int i = 1; i < numbers.size(); i++)
+            if (!numbers[i]) return i;
+    }
+    else return 0;  
 }
 
 // TODO
