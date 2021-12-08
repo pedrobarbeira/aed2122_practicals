@@ -45,7 +45,8 @@ void Dictionary::readFile(ifstream &f) {
 
 //TODO
 string Dictionary::consult(string word1, WordMean& previous, WordMean& next) const {
-    return "";
+
+
 }
 
 //TODO
@@ -56,5 +57,10 @@ bool Dictionary::update(string word1, string mean1) {
 //TODO
 void Dictionary::print() const {
     words.printTree();
+}
+
+ostream& operator<<(ostream& out, const WordMean& w){
+    out << w.meaning << '\n' << w.word << '\n';
+    return out;
 }
 

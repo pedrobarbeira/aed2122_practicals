@@ -50,8 +50,8 @@ int FunSearchProblem::smallestMissingValue(const vector<int> & values) {
     for(int i = 0; i < values.size(); i++)
         if(values[i] > 0)
             numbers[values[i]] = true;
-    for(int i = 0; i < numbers.size(); i++)
-        if(i == false) return i;
+    for(int i = 1; i < numbers.size(); i++)
+        if(!numbers[i]) return i;
     return 0;
 }
 

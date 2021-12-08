@@ -14,7 +14,7 @@ public:
     void setMeaning(string m);
     void setWord(string w);
     bool operator<(const WordMean& rhs) const;
-    void operator<<(const WordMean& out) const;
+    friend ostream& operator<<(ostream& out, const WordMean& w);
 };
 
 class Dictionary

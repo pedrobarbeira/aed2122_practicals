@@ -40,7 +40,10 @@ TEST(test, squareR){
 }
 
 TEST(test, missingvalue){
+    FunSearchProblem test;
+    vector<int> v = {1, 2, 4};
 
+    std::cout << test.smallestMissingValue(v);
 }
 
 TEST(test, minPages){
