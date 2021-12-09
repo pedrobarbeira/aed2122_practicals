@@ -414,7 +414,7 @@ class iteratorBST {
     friend class BST<Comparable>;
 public:
     iteratorBST<Comparable>& operator ++(int);
-    Comparable operator*() const;
+    Comparable& operator*() const;
     bool operator==(const iteratorBST<Comparable>& it2) const;
     bool operator!=(const iteratorBST<Comparable>& it2) const;
     bool operator<(const iteratorBST<Comparable>& it2) const;
@@ -445,7 +445,7 @@ iteratorBST<Comparable>& iteratorBST<Comparable>::operator++ (int) {
 }
 
 template <class Comparable>
-Comparable iteratorBST<Comparable>::operator*() const {
+Comparable& iteratorBST<Comparable>::operator*() const {
     return itrStack.top()->element;
 }
 
@@ -469,7 +469,21 @@ bool iteratorBST<Comparable>::operator<(const iteratorBST<Comparable>& it2) cons
 //TODO
 template <class Comparable>
 int BST<Comparable>::size(const Comparable& el) const {
-    return -1;
+    Comparable c = find(el);
+    int count = -1;
+    if (c == ITEM_NOT_FOUND)
+        return count;
+    else{
+        iteratorBST<Comparable> it = this->begin();
+        while(it != this->end()){
+            if((*it) != el){
+                count++;
+                it++;
+            }
+            else break;
+        }
+        return count;
+    }
 }
 
 #endif

@@ -27,6 +27,14 @@ bool WordMean::operator<(const WordMean& rhs) const{
     return this->word < rhs.word;
 }
 
+bool WordMean::operator>(const WordMean& rhs) const{
+    return this->word > rhs.word;
+}
+
+bool WordMean::operator==(const WordMean& rhs) const{
+    return this->word == rhs.word;
+}
+
 BST<WordMean> Dictionary::getWords() const {
 	return words;
 }
@@ -45,13 +53,34 @@ void Dictionary::readFile(ifstream &f) {
 
 //TODO
 string Dictionary::consult(string word1, WordMean& previous, WordMean& next) const {
-
-
+        WordMean findMean(word1, "");
+        iteratorBST<WordMean> it = words.begin();
+        while(it != words.end()){
+            if((*it) == findMean) return (*it).getMeaning();
+            else {
+                if (it == words.begin()) previous = (*it);
+                else previous = next;
+                it++;
+                next = (*it);
+                if(findMean < next) break;
+            }
+        }
+    return "word not found";
 }
 
 //TODO
 bool Dictionary::update(string word1, string mean1) {
-    return true;
+    iteratorBST<WordMean> it = words.begin();
+    while(it != words.end()){
+        if((*it).getWord() == word1){
+            (*it).setMeaning(mean1);
+            return true;
+        }
+        else it++;
+    }
+    WordMean updateMean(word1, mean1);
+    words.insert(updateMean);
+    return false;
 }
 
 //TODO
@@ -60,7 +89,7 @@ void Dictionary::print() const {
 }
 
 ostream& operator<<(ostream& out, const WordMean& w){
-    out << w.meaning << '\n' << w.word << '\n';
+    out << w.word << '\n' << w.meaning << '\n';
     return out;
 }
 
