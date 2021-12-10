@@ -1,4 +1,5 @@
 #include "game.h"
+#include <cmath>
 #include <sstream>
 
 Circle::Circle(int p, bool s): points(p), state(s), nVisits(0) {}
@@ -36,6 +37,7 @@ BinaryTree<Circle>& Game::getGame() {
 
 //TODO
 Game::Game(int height, vector<int>& points, vector<bool>& states) {
+    game = BinaryTree<Circle>(Circle(points[0], states[0]))
 }
 
 //TODO

@@ -62,16 +62,22 @@ public:
     iteratorBST<Comparable> begin() const;
     iteratorBST<Comparable> end() const;
     int size(const Comparable& el) const;   //new
+    void copySubTree(BinaryNode<Comparable>* t);
 };
 
 // Note that all "matching" is based on the < method.
+
+template<typename Comparable>
+void BST<Comparable>::copySubTree(BinaryNode<Comparable>* t){
+    this->root = t;
+}
 
 template <class Comparable>
 BST<Comparable>::BST(const Comparable& notFound): root(NULL), ITEM_NOT_FOUND(notFound)
 { }
 
 template <class Comparable>
-BST<Comparable>::BST(const BST<Comparable>& rhs): root(NULL), ITEM_NOT_FOUND(rhs.ITEM_NOT_FOUND) {
+BST<Comparable>::   BST(const BST<Comparable>& rhs): root(NULL), ITEM_NOT_FOUND(rhs.ITEM_NOT_FOUND) {
     *this = rhs;
 }
 
@@ -469,20 +475,24 @@ bool iteratorBST<Comparable>::operator<(const iteratorBST<Comparable>& it2) cons
 //TODO
 template <class Comparable>
 int BST<Comparable>::size(const Comparable& el) const {
-    Comparable c = find(el);
-    int count = -1;
-    if (c == ITEM_NOT_FOUND)
-        return count;
+    BinaryNode<Comparable> *c;
+    c = find(el, root);
+    if (c == NULL)
+        return -1;
     else{
-        iteratorBST<Comparable> it = this->begin();
-        while(it != this->end()){
-            if((*it) != el){
+        int count = 0;
+        if(c->left == NULL && c->right == NULL) return count;
+        else{
+            if(c->left != NULL) {
                 count++;
-                it++;
+                count += size(c->left->element);
             }
-            else break;
+            if(c->right != NULL) {
+                count++;
+                count += size(c->right->element);
+            }
+            return count;
         }
-        return count;
     }
 }
 
