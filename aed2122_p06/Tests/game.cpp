@@ -59,9 +59,7 @@ int Game::play() {
     while(!it.isAtEnd()){
         Circle& current = it.retrieve();
         c.incNVisits();
-        bool state = c.getState();
-        c.changeState();
-        if(state){
+        if(c.getState()){
             for(int p = c.getPoints(); p >= 0; p--) {
                 it.advance();
                 if (it.isAtEnd()) {
@@ -81,6 +79,7 @@ int Game::play() {
         }
         if(over) break;
         else {
+            c.changeState();
             current = c;
             c = it.retrieve();
         }
