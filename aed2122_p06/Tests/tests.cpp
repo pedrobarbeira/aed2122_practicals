@@ -127,7 +127,7 @@ TEST(test_2, a_InitGame) {
     if (game1.getGame().isEmpty() == false)
         EXPECT_EQ(1, game1.getGame().getRoot().getPoints());
 }
-/**
+
 TEST(test_2, b_Play) {
     cout<<endl<<"Testing 'playGame'"<<endl;
     vector<int> points;
@@ -169,4 +169,3 @@ TEST(test_2, c_MostVisited) {
     game1.play(); game1.play(); game1.play();game1.play();
     EXPECT_EQ(4, game1.mostVisited());
 }
-*/
