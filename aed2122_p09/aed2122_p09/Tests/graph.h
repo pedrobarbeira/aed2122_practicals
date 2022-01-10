@@ -45,6 +45,7 @@ public:
     bool cycleDfs(int v);
     // Breadth-First Search: example implementation
     void bfs(int v);
+    void bfsDist(int v);
 
     // ----- Functions to implement in this class -----
     int outDegree(int v);

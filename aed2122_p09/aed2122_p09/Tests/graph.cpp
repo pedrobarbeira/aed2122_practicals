@@ -35,8 +35,7 @@ void Graph::bfs(int v) {
     for (int v=1; v<=n; v++) nodes[v].visited = false;
     queue<int> q; // queue of unvisited nodes
     q.push(v);
-    nodes[v].distance = 0;
-    nodes[v].visited = true;
+    nodes[v]. visited = true;
     while (!q.empty()) { // while there are still unvisited nodes
         int u = q.front(); q.pop();
         cout << u << " "; // show node order
@@ -45,7 +44,6 @@ void Graph::bfs(int v) {
             if (!nodes[w].visited) {
                 q.push(w);
                 nodes[w].visited = true;
-                nodes[w].distance = nodes[u].distance+1;
             }
         }
     }
@@ -131,16 +129,32 @@ void Graph::dfsTopo(int v, list<int>& order) {
 // a) Distancia entre dois nos
 // TODO
 int Graph::distance(int a, int b) {
-    bfs(a);
     if(a == b) return 0;
-    else if (nodes[a].distance == nodes[b].distance) {
-        for (auto e : nodes[a].adj)
-            if (e.dest == b) return 1;
-        return -1;
-    }
-    else return nodes[b].distance - nodes[a].distance;
+    for(int i = 1; i <= n; i++)
+        nodes[i].distance = -1;
+    bfsDist(a);
+    return nodes[b].distance;
 }
+void Graph::bfsDist(int v){
+    nodes[v].distance = 0;
+    for (int v=1; v<=n; v++) nodes[v].visited = false;
+    queue<int> q; // queue of unvisited nodes
+    q.push(v);
+    nodes[v]. visited = true;
+    while (!q.empty()) { // while there are still unvisited nodes
+        int u = q.front(); q.pop();
+        cout << u << " "; // show node order
+        for (auto e : nodes[u].adj) {
+            int w = e.dest;
+            if (!nodes[w].visited) {
+                q.push(w);
+                nodes[w].visited = true;
+                nodes[w].distance = nodes[u].distance + 1;
+            }
+        }
+    }
 
+}
 
 // ..............................
 // b) Diametro
@@ -148,6 +162,11 @@ int Graph::distance(int a, int b) {
 int Graph::diameter() {
     if (connectedComponents() > 1) return -1;
     else{
+        bfsDist(1);
+        int d = 0;
+        for(int i = 1; i <= n; i++)
+            d = max(d, nodes[i].distance);
+        return d;
     }
 }
 
