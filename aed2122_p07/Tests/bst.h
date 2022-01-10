@@ -581,9 +581,8 @@ void BST<Comparable>::rightRotate(const Comparable& x) {
     Y->right = f;
     f->left = T2;
     BinaryNode<Comparable> *r = root;
-    if(r->element == x) {
+    if(r->element == x)
         root = Y;
-    }
     else {
         while (true) {
             if (r->left != NULL && r->left->element == f->element) {
