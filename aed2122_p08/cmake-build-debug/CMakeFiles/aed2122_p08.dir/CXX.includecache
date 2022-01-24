@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p08/Tests/funWithHashTables.cpp
+funWithHashTables.h
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p08/Tests/funWithHashTables.h
+hashTable.h
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p08/Tests/hashTable.h
+vector
+-
+iostream
+-
+cctype
+-
+cmath
+-
+
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p08/Tests/funWithHashTables.h
+vector
+-
+string
+-
+list
+-
+unordered_set
+-
+unordered_map
+-
+
+C:/Users/35191/Desktop/MIEIC/2ano/1o Semestre/AEDA/Praticas/aed2122_p08/Tests/hashTable.h
+vector
+-
+functional
+-
+

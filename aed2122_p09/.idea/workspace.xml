@@ -33,7 +33,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ed446bc-8490-4427-9fd8-54fdefb3abcc" name="Default Changelist" comment="" />
+    <list default="true" id="8ed446bc-8490-4427-9fd8-54fdefb3abcc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,7 +44,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -85,17 +86,12 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Google Test.aed2122_p09" />
       <item itemvalue="CMake Application.gmock" />
       <item itemvalue="CMake Application.gmock_main" />
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
-      <item itemvalue="Google Test.aed2122_p09" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -108,6 +104,8 @@
       <updated>1641566210320</updated>
       <workItem from="1641566211399" duration="5375000" />
       <workItem from="1641807763785" duration="1514000" />
+      <workItem from="1642001765763" duration="1789000" />
+      <workItem from="1642891392734" duration="37000" />
     </task>
     <servers />
   </component>
@@ -159,16 +157,5 @@
       <screen x="0" y="-1080" width="1920" height="1032" />
     </state>
     <state width="1877" height="344" key="GridCell.Tab.1.right/0.0.1536.816/0.-1080.1920.1032@0.-1080.1920.1032" timestamp="1641809290687" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/aed2122_p09/Tests/tests.cpp</url>
-          <line>166</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
