@@ -93,9 +93,31 @@ Graph FunWithGraphs::graph4() {
 // ..............................
 // a) Um pequeno jogo
 // TODO
-int FunWithGraphs::game(const vector<int>& v) {
-     return 0;
+
+int sumDigits(int n){
+    int ret = 0;
+    while(n > 0){
+        ret += n % 10;
+        n /= 10;
+    }
+    return ret;
 }
+int FunWithGraphs::game(const vector<int>& v) {
+     MinHeap<int, int> heap(v.size(), -1);
+     for(auto const& n : v){
+        heap.insert(n, sumDigits(n));
+     }
+     while(heap.getSize() != 1){
+         int n1 = heap.removeMin();
+         int n2 = heap.removeMin();
+         int n = abs(n1 - n2);
+         heap.insert(n, sumDigits(n));
+     }
+
+     return heap.removeMin();
+}
+
+
 
 // ----------------------------------------------------------
 // Exercicio 6: Uma cidade "quadriculada"

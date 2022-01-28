@@ -57,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../aed2122_p10" />
   </component>
   <component name="RunManager" selected="Google Test.aed2122_p09">
     <configuration name="aed2122_p09" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="aed2122_p09" TARGET_NAME="aed2122_p09" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="aed2122_p09" RUN_TARGET_NAME="aed2122_p09" TEST_MODE="SUITE_TEST">
@@ -106,6 +106,8 @@
       <workItem from="1641807763785" duration="1514000" />
       <workItem from="1642001765763" duration="1789000" />
       <workItem from="1642891392734" duration="37000" />
+      <workItem from="1643069161342" duration="41000" />
+      <workItem from="1643298453636" duration="61000" />
     </task>
     <servers />
   </component>
@@ -125,6 +127,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1643298514059">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="740" y="271" key="FileChooserDialogImpl/-1920.790.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1643298514059" />
     <state width="1877" height="344" key="GridCell.Tab.0.bottom" timestamp="1641809290687">
       <screen x="0" y="-1080" width="1920" height="1032" />
     </state>

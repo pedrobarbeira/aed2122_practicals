@@ -20,7 +20,30 @@ void Graph::addEdge(int src, int dest, int weight) {
 // ----------------------------------------------------------
 // TODO
 int Graph::prim(int r) {
-    return 0;
+    MinHeap<int, int> q(nodes.size(), -1);
+    for(int i = 1; i < nodes.size(); i++){
+        nodes[i].distance = INT_MAX;
+        nodes[i].parent = 0;
+        q.insert(i, nodes[i].distance);
+    }
+    nodes[r].distance = 0;
+    q.decreaseKey(r, 0);
+    while(q.getSize() != 0){
+        int u = q.removeMin();
+        for(auto edge : nodes[u].adj){
+            int n = edge.dest;
+            nodes[n].parent = u;
+            if(q.hasKey(n) && edge.weight < nodes[n].distance)
+                nodes[n].distance = edge.weight;
+            q.decreaseKey(n, edge.weight);
+        }
+    }
+
+    int ret = 0;
+    for(auto const & node : nodes)
+        ret += node.distance;
+    
+    return ret;
 }
 
 

@@ -20,6 +20,8 @@ class Graph {
 
     struct Node {
         list<Edge> adj; // The list of outgoing edges (to adjacent nodes)
+        int distance;
+        int parent;
     };
 
     int n;              // Graph size (vertices are numbered from 1 to n)
